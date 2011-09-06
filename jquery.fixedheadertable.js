@@ -413,11 +413,12 @@
 				// Fix cell heights
 				helpers._fixHeightWithCss( $firstThChild, tableProps );
 				helpers._fixWidthWithCss( $firstThChild, tableProps );
-				$firstTdChildren = $fixedBody.find('tbody tr td:first-child')
+				$firstTdChildren = $wrapper.find('.fht-fixed-body>tbody tr td:first-child')
 					.each( function(index) {
 						helpers._fixHeightWithCss( $(this), tableProps );
 						helpers._fixWidthWithCss( $(this), tableProps );
 					});
+				
 				
 				// clone header
 				$thead.appendTo($fixedColumn)
